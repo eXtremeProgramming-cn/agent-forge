@@ -170,13 +170,29 @@ Based on user input, generate in `references/`:
 
 All agent blueprints are written in the **user-specified agent blueprint language**.
 
+**CRITICAL WORKSPACE ISOLATION REQUIREMENT**:
+
+Every agent blueprint MUST include explicit instructions at the beginning that enforce workspace isolation:
+
+```
+IMPORTANT: You must work ONLY within the project directory: {PROJECT_ID}/
+- You MUST NOT read any files outside this directory
+- You MUST NOT write any files outside this directory
+- All file paths you use must be relative to this project root or absolute paths within it
+- This constraint prevents context pollution and ensures system isolation
+```
+
+This workspace boundary constraint must be emphasized in all four agent blueprints.
+
 **00.orchestrator.md**:
 - Define orchestration logic for three-phase process
 - Handle parameter passing and exceptions
 - Coordinate execution of each agent
+- **Include workspace isolation constraint at the top**
 - Use user-specified agent blueprint language
 
 **01.data_collector.md**:
+- **Include workspace isolation constraint at the top**
 - Customized based on user's data sources and objectives
 - Embed quality requirements
 - Reference `references/data-sources.md`
@@ -184,6 +200,7 @@ All agent blueprints are written in the **user-specified agent blueprint languag
 - Use user-specified agent blueprint language
 
 **02.analyzer.md**:
+- **Include workspace isolation constraint at the top**
 - Customized based on user's analysis methods
 - Read `data/01.materials/`
 - Reference `references/analysis-methods.md`
@@ -191,6 +208,7 @@ All agent blueprints are written in the **user-specified agent blueprint languag
 - Use user-specified agent blueprint language
 
 **03.reporter.md**:
+- **Include workspace isolation constraint at the top**
 - Customized based on user's report format and structure
 - Read `data/02.analysis/`
 - Reference `references/report-template.md` and `references/style-guide.md`
@@ -274,6 +292,21 @@ System has built-in multi-layer quality assurance:
 - Self-checks against standards during execution
 - Next phase agent validates output of previous phase
 - All intermediate outputs available for human review
+
+### About Workspace Isolation
+
+**Critical importance**: Every generated agent MUST be constrained to work only within its project directory:
+
+**Why this matters**:
+- **Prevents context pollution**: Agents won't accidentally read files from other projects or system directories
+- **Ensures reproducibility**: The system's behavior depends only on files within its project directory
+- **Improves clarity**: All data dependencies are explicit and visible within the project structure
+- **Enables parallel projects**: Multiple research projects can coexist without interference
+
+**How to enforce**:
+- Every agent blueprint must include workspace isolation instructions at the very top
+- Instructions must explicitly forbid reading/writing outside the project directory
+- File paths should be relative to project root or absolute paths within the project
 
 ---
 
