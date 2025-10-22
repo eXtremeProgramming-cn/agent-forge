@@ -1,6 +1,6 @@
-# Research Multi-Agent System Generator
+# AgentForge
 
-This generator can automatically create a complete, immediately runnable multi-agent research system based on your research project requirements.
+AgentForge automatically creates complete, immediately runnable multi-agent research systems based on your research project requirements.
 
 ## Usage
 
