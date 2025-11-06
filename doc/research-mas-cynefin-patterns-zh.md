@@ -8,6 +8,8 @@
 
 本文提出了一个针对研究用多智能体系统(Research-Oriented Multi-Agent Systems, Research MAS)的设计框架。我们首先界定"研究用MAS"的范畴——其系统边界是研究过程本身而非研究对象,目的是知识发现与洞察生成,主要处理非结构化质性材料。针对现有MAS设计方法缺乏对"应该构建什么"的系统指导这一问题,本文引入Dave Snowden的Cynefin框架,并在研究情境下对其进行重新诠释。
 
+![Cynefin Framework](https://upload.wikimedia.org/wikipedia/commons/a/ab/Cynefin_framework_2022.jpg)
+
 我们提出"业务架构"概念以区别于技术架构,建立了研究任务的Cynefin域分类决策树,并揭示研究过程的本质——域降解(Domain Decomposition)的演化路径(Chaotic → Complex → Complicated → Clear)。基于这个框架,我们提炼了四个Cynefin域的典型范例(exemplars):档案文件批量获取(Clear)、指标化评估系统(Complicated)、理论框架发现型研究(Complex)、创造性田野研究(Chaotic)。每个范例都是一个完整的设计模式,包含情境、问题、业务架构、MAS设计、人机协作模式、具体例子和关键设计原则。
 
 本文的核心贡献在于:(1)明确界定了"研究用MAS"的范畴与特征;(2)引入"业务架构"作为区别于技术架构的设计层次;(3)重新诠释Cynefin框架在研究情境中的应用,提出"信息存在性"作为关键分类标准;(4)揭示域降解作为研究演化的核心机制;(5)提供可复用的设计模式作为实践指导。
