@@ -20,8 +20,8 @@ If you're unsure about certain questions, you can fill in "Suggested by AI".
 Execute in Claude Code:
 
 ```
-Please read the information I filled in generator/user_input.md,
-then use the generator/generator.md prompt,
+Please read the information I filled in user_input.md,
+then use the generator.md prompt,
 to generate a research multi-agent system for me.
 ```
 
