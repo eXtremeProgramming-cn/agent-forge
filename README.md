@@ -1,3 +1,5 @@
+![](./logo.png)
+
 # AgentForge
 
 AgentForge automatically creates complete, immediately runnable multi-agent research systems based on your research project requirements.
