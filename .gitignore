@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.env
+.vscode/
+.idea/
+*.log
+coverage/
+*.tmp
+*.bak
+*.swp
+Thumbs.db
+*.class
+*.jar
+*.war
+*.iml
+out/
+build/
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# macOS
+.DS_Store
