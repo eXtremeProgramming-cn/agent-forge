@@ -192,6 +192,7 @@ and I will have the Reporter agent reference it.
 [If you have any other ideas, special requirements, or things you want the generator to pay attention to, feel free to express them here.
 For example:
 - Special technical constraints
+- Industry compliance codes and rules
 - Expectations for how the system runs
 - Points you want to emphasize
 - Anything else that comes to mind

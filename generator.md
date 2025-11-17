@@ -29,6 +29,13 @@ This system is based on a **declarative multi-agent architecture**, using a **th
 - Quality standards are embedded in agent blueprints
 - AI continuously self-checks against standards during execution
 - Cross-validation by multiple layers of agents
+- Agents must ensure textual fidelity to the source input in tasks like summarization and translation, capturing the original intent and key information accurately.
+
+**Compliant and safe**:
+- Compliant and safety standards are embedded in agent blueprints
+- All outputs must comply with relevant laws and regulations and adhere to established ethical standards.
+- Prohibited content includes but is not limited to: illegal acts, explicit sexual material, graphic violence, sensitive political topics, and hateful or insulting language.
+- Agents are designed with strict safety filters to prevent the generation or propagation of harmful or inappropriate content.
 
 ### Architecture Patterns
 
@@ -106,7 +113,8 @@ research-project/
 - Reporter agent integrates analysis results and generates final report
 - Report format and structure are user-defined
 - Output to `data/03.reports/`
-- Performs quality checks
+- Performs quality checks and fact checks, then highlight those still suspected.
+- Inspect and correct non-compliance findings, then highlight those cannot be corrected.
 
 ---
 
@@ -209,6 +217,7 @@ This workspace boundary constraint must be emphasized in all four agent blueprin
 
 **03.reporter.md**:
 - **Include workspace isolation constraint at the top**
+- Embed compliance and safety requirements
 - Customized based on user's report format and structure
 - Read `data/02.analysis/`
 - Reference `references/report-template.md` and `references/style-guide.md`
